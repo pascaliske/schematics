@@ -1,0 +1,7 @@
+{
+  "**/*.ts": [
+    "tslint --project tsconfig.json --fix",
+    "prettier --config .prettierrc --write",
+    "git add"
+  ]
+}

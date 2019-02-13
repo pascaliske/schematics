@@ -1,0 +1,126 @@
+import { join } from 'path'
+import { JsonObject } from '@angular-devkit/core'
+import { Configuration, Entry, DefinePlugin } from 'webpack'
+import externals from 'webpack-node-externals'
+import CleanWebpackPlugin from 'clean-webpack-plugin'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
+import GenerateJsonWebpackPlugin from 'generate-json-webpack-plugin'
+import VisualizerPlugin from 'webpack-visualizer-plugin'
+import TerserPlugin from 'terser-webpack-plugin'
+import { collection } from './collection'
+import { version, repository } from './package.json'
+
+export interface Schematic {
+    id: string
+    description: string
+    aliases?: string[]
+    hidden?: boolean
+}
+
+const reduce = <T = any>(a: T[], r: (prev: any, curr: T) => object) => a.reduce(r, {})
+
+const buildEntries = (): Entry => {
+    return reduce(collection, (prev: any, { id }: Schematic) => ({
+        ...prev,
+        [id]: join(__dirname, 'src', 'schematics', id, `${id}.ts`),
+    }))
+}
+
+const buildGlob = (): string => {
+    if (collection.length > 1) {
+        return `{${collection.map(schematic => schematic.id).join(',')}}`
+    }
+
+    return collection.map(schematic => schematic.id).join(',')
+}
+
+const buildCollection = (): JsonObject => {
+    return {
+        $schema: '../node_modules/@angular-devkit/schematics/collection-schema.json',
+        extends: ['@schematics/angular'],
+        schematics: reduce(
+            collection,
+            (prev: any, { id, description, aliases, hidden }: Schematic) => ({
+                ...prev,
+                [id]: {
+                    factory: `./${id}/${id}`,
+                    schema: `./${id}/${id}.schema.json`,
+                    description,
+                    ...(aliases && aliases.length > 0 ? { aliases } : {}),
+                    ...(hidden && hidden === true ? { hidden: true } : {}),
+                },
+            }),
+        ),
+    }
+}
+
+/**
+ * Config builder for webpack.
+ *
+ * @param _ - The webpack environment
+ * @param argv - Array of webpack cli arguments
+ */
+export default (_, argv: any): Configuration => ({
+    target: 'node',
+    devtool: 'hidden-source-map',
+    entry: buildEntries(),
+    module: {
+        rules: [
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: ['.ts', '.js'],
+    },
+    externals: [
+        externals({
+            whitelist: ['npm-registry-client'],
+        }),
+    ],
+    plugins: [
+        new DefinePlugin({
+            VERSION: JSON.stringify(version),
+            ENVIRONMENT: JSON.stringify(argv.mode),
+            REPOSITORY: JSON.stringify(repository.url),
+        }),
+        new CleanWebpackPlugin(['dist'], {
+            beforeEmit: true,
+            verbose: false,
+        }),
+        new CopyWebpackPlugin([
+            {
+                from: join('src', 'schematics', buildGlob(), '*.schema.json'),
+                to: join('[1]', '[1].schema.json'),
+                test: /([a-zA-Z-]*)\.schema\.json$/,
+            },
+            {
+                from: join('src', 'schematics', buildGlob(), 'files', '**', '*'),
+                fromArgs: { nodir: false, dot: true, nobrace: false },
+                to: join('[1]', 'files', '[2]'),
+                test: /([a-zA-Z-]*)\/files\/(.+)$/,
+            },
+        ]),
+        new GenerateJsonWebpackPlugin('collection.json', buildCollection(), null, 2),
+        new VisualizerPlugin({
+            filename: './stats.html',
+        }),
+    ],
+    optimization: {
+        minimizer: [new TerserPlugin()],
+        noEmitOnErrors: true,
+    },
+    output: {
+        path: join(__dirname, 'dist'),
+        filename: '[name]/[name].js',
+        libraryTarget: 'commonjs',
+    },
+    stats: {
+        all: false,
+        errors: true,
+        chunks: true,
+    },
+})

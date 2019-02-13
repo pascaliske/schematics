@@ -1,0 +1,14 @@
+src
+stats.html
+tsconfig.json
+.commitlintrc.json
+.editorconfig
+.huskyrc
+.lintstagedrc
+.prettierignore
+.prettierrc
+.snyk
+.travis.yml
+*.ts
+*.code-*
+*.lock
