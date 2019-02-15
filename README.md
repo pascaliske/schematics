@@ -1,6 +1,6 @@
 # Angular Schematics Collection
 
-[![Build Status](https://travis-ci.com/pascaliske/schematics.svg?branch=master)](https://travis-ci.com/pascaliske/schematics)
+[![Build Status](https://travis-ci.com/pascaliske/schematics.svg?branch=master)](https://travis-ci.com/pascaliske/schematics) [![Greenkeeper badge](https://badges.greenkeeper.io/pascaliske/schematics.svg)](https://greenkeeper.io/)
 
 ## Installation
 
