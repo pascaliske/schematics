@@ -1,3 +1,2 @@
-export interface NgAddSchema {
-    skipInstall: boolean
-}
+// tslint:disable-next-line
+export interface NgAddSchema {}
