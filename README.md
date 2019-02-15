@@ -4,6 +4,12 @@
 
 ## Installation
 
+To install the schematics collection use the following command:
+
+```bash
+$ ng add @pascaliske/schematics
+```
+
 ## Schematics
 
 ## License

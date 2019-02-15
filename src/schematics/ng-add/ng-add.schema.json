@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@pascaliske/schematics/ng-add",
+  "title": "Add the schematic collection to your Angular project.",
+  "type": "object",
+  "properties": {
+    "skipInstall": {
+      "type": "boolean",
+      "description": "When true, does not install dependency packages.",
+      "default": false
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}
