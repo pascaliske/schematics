@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@pascaliske/schematics/travis",
+  "title": "Integrate Travis CI into your Angular project.",
+  "type": "object",
+  "properties": {
+    "versions": {
+      "type": "string",
+      "description": "Specify which versions the Travis CI file should contain. To specify multiple versions use a comma separated string.",
+      "x-prompt": "Specify which versions the Travis CI file should contain. To specify multiple versions use a comma separated string.",
+      "minLength": 1
+    },
+    "packageManager": {
+      "enum": ["yarn", "npm"],
+      "description": "Specify the package manger to be used in your Travis CI file.",
+      "default": "yarn",
+      "x-prompt": "Specify the package manger to be used in your Travis CI file. (default: yarn)"
+    }
+  },
+  "required": ["versions"],
+  "additionalProperties": false
+}

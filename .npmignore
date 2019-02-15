@@ -1,6 +1,10 @@
 src
 stats.html
 tsconfig.json
+tslint.json
+.idea
+.vscode
+.settings
 .commitlintrc.json
 .editorconfig
 .huskyrc
@@ -12,3 +16,4 @@ tsconfig.json
 *.ts
 *.code-*
 *.lock
+*.log

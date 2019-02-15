@@ -1,7 +1,7 @@
 {
   "name": "@pascaliske/schematics",
-  "description": "",
-  "version": "0.0.0",
+  "description": "Angular schematics collection for integrating setup tools like prettier and storybook.",
+  "version": "0.0.1",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
@@ -25,7 +25,8 @@
     "build": "webpack --config webpack.config.ts --progress --mode production",
     "lint": "tslint --project tsconfig.json --fix",
     "check": "snyk test && snyk monitor",
-    "format": "prettier --config .prettierrc --write \"**/*.{ts,md}\""
+    "format": "prettier --config .prettierrc --write \"**/*.{ts,md}\"",
+    "changelog": "standard-changelog"
   },
   "publishConfig": {
     "access": "public"
@@ -38,7 +39,7 @@
   "devDependencies": {
     "@commitlint/cli": "^7.5.1",
     "@commitlint/config-conventional": "^7.5.0",
-    "@types/node": "^10.12.24",
+    "@types/node": "^11.9.4",
     "@types/webpack": "^4.4.24",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
@@ -48,12 +49,13 @@
     "prettier": "^1.16.4",
     "rxjs-tslint-rules": "^4.9.0",
     "snyk": "^1.130.0",
+    "standard-changelog": "^2.0.7",
     "terser-webpack-plugin": "^1.2.2",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "~3.2.2",
+    "typescript": "~3.3.3",
     "webpack": "^4.29.3",
     "webpack-cli": "^3.2.3",
     "webpack-node-externals": "^1.7.2",

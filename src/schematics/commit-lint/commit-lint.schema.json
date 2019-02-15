@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@pascaliske/schematics/commit-lint",
+  "title": "Integrate commit linting into your Angular project.",
+  "type": "object",
+  "properties": {
+    "skipInstall": {
+      "type": "boolean",
+      "description": "When true, does not install dependency packages.",
+      "default": false
+    },
+    "preset": {
+      "enum": ["conventional"],
+      "description": "Specify the preset that the linter will use.",
+      "default": "conventional",
+      "x-prompt": "Specify the preset that the linter will use. (default: conventional)"
+    },
+    "headerLength": {
+      "enum": [100],
+      "description": "Specify the header length that the linter will check.",
+      "default": 100,
+      "x-prompt": "Specify the header length that the linter will check. (default: 100)"
+    }
+  },
+  "required": ["preset"],
+  "additionalProperties": false
+}

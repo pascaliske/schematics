@@ -9,4 +9,28 @@ export const collection: Schematic[] = [
         description: 'Add the schematic collection to your Angular project.',
         hidden: true,
     },
+    {
+        id: 'component',
+        description: 'Generate a new Angular component including Storybook related files.',
+    },
+    {
+        id: 'prettier',
+        description: 'Integrate Prettier formatting into your Angular project.',
+    },
+    {
+        id: 'commit-lint',
+        description: 'Integrate commit linting into your Angular project.',
+    },
+    {
+        id: 'snyk',
+        description: 'Integrate Snyk security testing into your Angular project.',
+    },
+    {
+        id: 'travis',
+        description: 'Integrate Travis CI into your Angular project.',
+    },
+    {
+        id: 'storybook',
+        description: 'Integrate Storybook into your Angular project.',
+    },
 ]

@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - <%= versions.map(v => `'${v}'`).join('\n  - ') %>
+cache: yarn
+install:
+  - <% if (useYarn) { %>yarn install<% } else { %>npm install<% } %>
+script:
+  - <% if (useYarn) { %>yarn run<% } else { %>npm run<% } %> build
