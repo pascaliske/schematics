@@ -21,4 +21,8 @@ export const collection: Schematic[] = [
         id: 'snyk',
         description: 'Integrate Snyk security testing into your Angular project.',
     },
+    {
+        id: 'storybook',
+        description: 'Integrate Storybook into your Angular project.',
+    },
 ]
