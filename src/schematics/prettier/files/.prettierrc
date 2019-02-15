@@ -1,0 +1,10 @@
+{
+  "printWidth": <%= printWidth %>,
+  "useTabs": <%= useTabs %>,
+  "tabWidth": <%= tabWidth %>,
+  "trailingComma": "<%= trailingComma %>",
+  "arrowParens": "<%= arrowParens %>",
+  "semi": <%= semi %>,
+  "singleQuote": <%= singleQuote %>,
+  "bracketSpacing": <%= bracketSpacing %>
+}

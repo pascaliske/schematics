@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@pascaliske/schematics/prettier",
+  "title": "Integrate Prettier formatting into your Angular project.",
+  "type": "object",
+  "properties": {
+    "files": {
+      "type": "string",
+      "description": "Define which files are formatted by prettier.",
+      "default": "src/**/*.{ts,scss,html,md}",
+      "x-prompt": "Define which files are formatted by prettier. (default: src/**/*.{ts,scss,html,md})"
+    },
+    "skipInstall": {
+      "type": "boolean",
+      "description": "When true, does not install dependency packages.",
+      "default": false
+    },
+    "skipHook": {
+      "type": "boolean",
+      "description": "Skip git hook setup for prettier.",
+      "default": false
+    },
+    "skipScript": {
+      "type": "boolean",
+      "description": "Skip npm script setup for prettier.",
+      "default": false
+    },
+    "excludes": {
+      "type": "string",
+      "description": "Exclude specific files during formatting. To specify multiple excludes use a comma separated string."
+    },
+    "printWidth": {
+      "enum": [80, 100, 120, 140],
+      "description": "Specify the line length that the printer will wrap on.",
+      "default": 100,
+      "x-prompt": "Specify the line length that the printer will wrap on. (default: 100)"
+    },
+    "useTabs": {
+      "type": "boolean",
+      "description": "Indent lines with tabs instead of spaces.",
+      "default": false,
+      "x-prompt": "Indent lines with tabs instead of spaces. (default: false)"
+    },
+    "tabWidth": {
+      "enum": [2, 4],
+      "description": "Specify the number of spaces per indentation-level.",
+      "default": 4,
+      "x-prompt": "Specify the number of spaces per indentation-level. (default: 4)"
+    },
+    "trailingComma": {
+      "enum": ["none", "es5", "all"],
+      "description": "Print trailing commas wherever possible when multi-line.",
+      "default": "all",
+      "x-prompt": "Print trailing commas wherever possible when multi-line? (default: all)"
+    },
+    "arrowParens": {
+      "enum": ["avoid", "always"],
+      "description": "Include parentheses around a single arrow function parameter.",
+      "default": "avoid",
+      "x-prompt": "Include parentheses around a single arrow function parameter? (default: avoid)"
+    },
+    "semi": {
+      "type": "boolean",
+      "description": "Print semicolons at the ends of statements.",
+      "default": false,
+      "x-prompt": "Print semicolons at the ends of statements? (default: false)"
+    },
+    "singleQuote": {
+      "type": "boolean",
+      "description": "Use single quotes instead of double quotes.",
+      "default": true,
+      "x-prompt": "Use single quotes instead of double quotes? (default: true)"
+    },
+    "bracketSpacing": {
+      "type": "boolean",
+      "description": "Print spaces between brackets in object literals.",
+      "default": true
+    }
+  },
+  "required": ["files"],
+  "additionalProperties": false
+}

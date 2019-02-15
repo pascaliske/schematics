@@ -1,0 +1,6 @@
+{
+  "<%= files %>": [
+    "prettier --config .prettierrc --write",
+    "git add"
+  ]
+}

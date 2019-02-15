@@ -9,4 +9,8 @@ export const collection: Schematic[] = [
         description: 'Add the schematic collection to your Angular project.',
         hidden: true,
     },
+    {
+        id: 'prettier',
+        description: 'Integrate Prettier formatting into your Angular project.',
+    },
 ]
