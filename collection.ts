@@ -10,6 +10,10 @@ export const collection: Schematic[] = [
         hidden: true,
     },
     {
+        id: 'component',
+        description: 'Generate a new Angular component including Storybook related files.',
+    },
+    {
         id: 'prettier',
         description: 'Integrate Prettier formatting into your Angular project.',
     },

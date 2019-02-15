@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@pascaliske/schematics/component",
+  "title": "Generate a new Angular component including Storybook related files.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Enter the name of the component.",
+      "x-prompt": "Enter the name of the component.",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    },
+    "skipStory": {
+      "type": "boolean",
+      "description": "When true, does not create a story for the component.",
+      "default": false
+    }
+  },
+  "required": ["name"],
+  "additionalProperties": false
+}
