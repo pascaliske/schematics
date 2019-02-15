@@ -13,4 +13,8 @@ export const collection: Schematic[] = [
         id: 'prettier',
         description: 'Integrate Prettier formatting into your Angular project.',
     },
+    {
+        id: 'commit-lint',
+        description: 'Integrate commit linting into your Angular project.',
+    },
 ]
