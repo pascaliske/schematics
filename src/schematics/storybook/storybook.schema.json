@@ -14,6 +14,12 @@
       "description": "Skip npm script setup for prettier.",
       "default": false
     },
+    "config": {
+      "type": "string",
+      "description": "Specify the config folder for storybook.",
+      "default": ".storybook",
+      "x-prompt": "Specify the config folder for storybook. (default: .storybook)"
+    },
     "name": {
       "type": "string",
       "description": "Specify the name for storybook.",

@@ -225,6 +225,12 @@ ng generate storybook [...flags]
 
 The following options can be used to tweak the result of the schematic. All options you leave out will be prompted interactively.
 
+###### `--config` | `string`
+
+Specify the config folder for storybook.
+
+- Default: `.storybook`
+
 ###### `--skip-install` | `boolean`
 
 Skip the installation process of newly added dependencies.
