@@ -17,4 +17,8 @@ export const collection: Schematic[] = [
         id: 'commit-lint',
         description: 'Integrate commit linting into your Angular project.',
     },
+    {
+        id: 'snyk',
+        description: 'Integrate Snyk security testing into your Angular project.',
+    },
 ]
