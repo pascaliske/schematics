@@ -25,7 +25,8 @@
     "build": "webpack --config webpack.config.ts --progress --mode production",
     "lint": "tslint --project tsconfig.json --fix",
     "check": "snyk test && snyk monitor",
-    "format": "prettier --config .prettierrc --write \"**/*.{ts,md}\""
+    "format": "prettier --config .prettierrc --write \"**/*.{ts,md}\"",
+    "changelog": "standard-changelog"
   },
   "publishConfig": {
     "access": "public"
@@ -48,6 +49,7 @@
     "prettier": "^1.16.4",
     "rxjs-tslint-rules": "^4.9.0",
     "snyk": "^1.130.0",
+    "standard-changelog": "^2.0.7",
     "terser-webpack-plugin": "^1.2.2",
     "ts-loader": "^5.3.3",
     "ts-node": "^8.0.2",
