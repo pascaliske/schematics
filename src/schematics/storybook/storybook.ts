@@ -25,8 +25,9 @@ export default function(options: StorybookSchema): Rule {
             '@storybook/components',
             'babel-loader',
         ]),
-        renderTemplates('./files', './.storybook', {
+        renderTemplates('./files', './', {
             params: {
+                config: options.config,
                 name: options.name,
                 theme: options.theme,
             },
@@ -34,7 +35,7 @@ export default function(options: StorybookSchema): Rule {
         conditional(!options.skipScript, [
             addScript(
                 'storybook',
-                `start-storybook --port ${options.port} --config-dir .storybook`,
+                `start-storybook --port ${options.port} --config-dir ${options.config}`,
             ),
         ]),
         conditional(!options.skipInstall, [installDependencies()]),

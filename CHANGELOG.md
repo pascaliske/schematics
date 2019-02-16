@@ -1,3 +1,18 @@
+## [0.0.2](https://github.com/pascaliske/schematics/compare/v0.0.1...v0.0.2) (2019-02-16)
+
+
+### Bug Fixes
+
+* **ng-add:** remove automatic installing of collection during add ([508656b](https://github.com/pascaliske/schematics/commit/508656b)), closes [#3](https://github.com/pascaliske/schematics/issues/3)
+* **npm:** only ignore config files in root directory during publish ([62e595f](https://github.com/pascaliske/schematics/commit/62e595f)), closes [#2](https://github.com/pascaliske/schematics/issues/2)
+
+
+### Features
+
+* **storybook:** allow changing the name of the storybook config folder ([1966752](https://github.com/pascaliske/schematics/commit/1966752))
+
+
+
 ## 0.0.1 (2019-02-15)
 
 
