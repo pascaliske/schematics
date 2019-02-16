@@ -14,7 +14,7 @@ tslint.json
 /.prettierrc
 /.snyk
 /.travis.yml
-*.ts
+/*.ts
 *.code-*
 *.lock
 *.log
