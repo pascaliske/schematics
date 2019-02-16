@@ -1,3 +1,12 @@
+## [0.0.3](https://github.com/pascaliske/schematics/compare/v0.0.2...v0.0.3) (2019-02-16)
+
+
+### Bug Fixes
+
+* **npm:** allow ts files in dist folder to be packed by npm ([c098e56](https://github.com/pascaliske/schematics/commit/c098e56)), closes [#4](https://github.com/pascaliske/schematics/issues/4)
+
+
+
 ## [0.0.2](https://github.com/pascaliske/schematics/compare/v0.0.1...v0.0.2) (2019-02-16)
 
 
