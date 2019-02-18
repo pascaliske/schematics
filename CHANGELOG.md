@@ -1,3 +1,17 @@
+## [0.0.4](https://github.com/pascaliske/schematics/compare/v0.0.3...v0.0.4) (2019-02-18)
+
+
+### Bug Fixes
+
+* **workspace:** fix typings for newer devkit packages ([468306f](https://github.com/pascaliske/schematics/commit/468306f)), closes [#5](https://github.com/pascaliske/schematics/issues/5) [#6](https://github.com/pascaliske/schematics/issues/6)
+
+
+### Features
+
+* **ngw:** add schematic for integrating ngw wrapper into an angular app ([77bc978](https://github.com/pascaliske/schematics/commit/77bc978))
+
+
+
 ## [0.0.3](https://github.com/pascaliske/schematics/compare/v0.0.2...v0.0.3) (2019-02-16)
 
 
