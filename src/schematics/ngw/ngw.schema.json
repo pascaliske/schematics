@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "@pascaliske/schematics/ngw",
+  "title": "Integrate ngw into your Angular project.",
+  "type": "object",
+  "properties": {
+    "skipInstall": {
+      "type": "boolean",
+      "description": "When true, does not install dependency packages.",
+      "default": false
+    },
+    "skipScript": {
+      "type": "boolean",
+      "description": "When true, does not add script entries in package.json.",
+      "default": false
+    },
+    "dashboard": {
+      "type": "boolean",
+      "description": "Add webpack dashboard plugin.",
+      "default": true,
+      "x-prompt": "Add webpack dashboard plugin."
+    },
+    "visualizer": {
+      "type": "boolean",
+      "description": "Add webpack visualizer plugin.",
+      "default": true,
+      "x-prompt": "Add webpack visualizer plugin."
+    },
+    "purifyCss": {
+      "type": "boolean",
+      "description": "Add webpack purify css plugin.",
+      "default": true,
+      "x-prompt": "Add webpack purify css plugin."
+    },
+    "versions": {
+      "type": "boolean",
+      "description": "Add automatic version constant replacements.",
+      "default": true,
+      "x-prompt": "Add automatic version constant replacements."
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

@@ -260,6 +260,54 @@ Specify the port for storybook.
 
 - Default: `9001`
 
+### `ngw`
+
+Integrate ngw wrapper into your Angular project.
+
+```bash
+ng generate ngw [...flags]
+```
+
+#### Options
+
+The following options can be used to tweak the result of the schematic. All options you leave out will be prompted interactively.
+
+###### `--skip-install` | `boolean`
+
+Skip the installation process of newly added dependencies.
+
+- Default: `false`
+
+###### `--skip-script` | `boolean`
+
+Don't add script entries to your `package.json` for automatically running through ngw wrapper.
+
+- Default: `false`
+
+###### `--dashboard` | `boolean`
+
+Add webpack dashboard plugin.
+
+- Default: `true`
+
+###### `--visualizer` | `boolean`
+
+Add webpack visualizer plugin.
+
+- Default: `true`
+
+###### `--purify-css` | `boolean`
+
+Add webpack purify css plugin.
+
+- Default: `true`
+
+###### `--versions` | `boolean`
+
+Add automatic version constant replacements.
+
+- Default: `true`
+
 ## License
 
 MIT © [Pascal Iske](https://pascal-iske.de)
