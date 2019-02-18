@@ -33,4 +33,8 @@ export const collection: Schematic[] = [
         id: 'storybook',
         description: 'Integrate Storybook into your Angular project.',
     },
+    {
+        id: 'ngw',
+        description: 'Integrate ngw into your Angular project.',
+    },
 ]
