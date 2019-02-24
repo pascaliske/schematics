@@ -35,7 +35,7 @@ export default function(options: StorybookSchema): Rule {
         conditional(!options.skipScript, [
             addScript(
                 'storybook',
-                `start-storybook --port ${options.port} --config-dir ${options.config}`,
+                `start-storybook --config-dir ${options.config} --port ${options.port}`,
             ),
         ]),
         conditional(!options.skipInstall, [installDependencies()]),
