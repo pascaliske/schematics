@@ -1,4 +1,4 @@
-import { configure, addDecorator } from '@storybook/angular'
+import { configure, addDecorator, moduleMetadata } from '@storybook/angular'
 import { themes } from '@storybook/components'
 import { withNotes } from '@storybook/addon-notes'
 import { withOptions } from '@storybook/addon-options'
@@ -13,6 +13,11 @@ addDecorator(
         url: repository.url.replace(/.git\/?$/, ''),
         theme: themes.<%= theme %>,
         hierarchySeparator: /\|/,
+    }),
+)
+addDecorator(
+    moduleMetadata({
+        imports: [],
     }),
 )
 
