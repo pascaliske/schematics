@@ -27,6 +27,7 @@ export const collection: Schematic[] = [
     },
     {
         id: 'travis',
+        aliases: ['ci'],
         description: 'Integrate Travis CI into your Angular project.',
     },
     {
