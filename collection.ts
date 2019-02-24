@@ -38,4 +38,8 @@ export const collection: Schematic[] = [
         id: 'ngw',
         description: 'Integrate ngw into your Angular project.',
     },
+    {
+        id: 'changelog',
+        description: 'Integrate standard-changelog into your Angular project.',
+    },
 ]
