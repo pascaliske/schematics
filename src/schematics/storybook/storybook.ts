@@ -23,7 +23,14 @@ export default function(options: StorybookSchema): Rule {
             '@storybook/addon-options',
             '@storybook/angular',
             '@storybook/components',
+            '@types/storybook__addon-actions',
+            '@types/storybook__addon-links',
+            '@types/storybook__addon-notes',
+            '@types/storybook__addon-options',
+            '@types/webpack',
             'babel-loader',
+            'css-loader',
+            'style-loader',
         ]),
         renderTemplates('./files', './', {
             params: {
