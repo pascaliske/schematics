@@ -13,6 +13,22 @@
         "index": 0
       }
     },
+    "project": {
+      "type": "string",
+      "description": "Name of the destination project."
+    },
+    "style": {
+      "description": "The file extension or preprocessor to use for style files.",
+      "type": "string",
+      "default": "scss",
+      "enum": [
+        "css",
+        "scss",
+        "sass",
+        "less",
+        "styl"
+      ]
+    },
     "skipStory": {
       "type": "boolean",
       "description": "When true, does not create a story for the component.",

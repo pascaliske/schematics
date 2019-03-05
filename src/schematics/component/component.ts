@@ -31,7 +31,11 @@ export default function(options: ComponentSchema): Rule {
         const location = parseName(buildDefaultPath(project), options.name)
 
         return chain([
-            externalSchematic('@schematics/angular', 'component', options),
+            externalSchematic('@schematics/angular', 'component', {
+                project: id,
+                name: options.name,
+                style: options.style,
+            }),
             conditional(!options.skipStory, [
                 renderTemplates('./files', location.path, {
                     params: options,
