@@ -87,10 +87,7 @@ export default (_, argv: any): Configuration => ({
             ENVIRONMENT: JSON.stringify(argv.mode),
             REPOSITORY: JSON.stringify(repository.url),
         }),
-        new CleanWebpackPlugin(['dist'], {
-            beforeEmit: true,
-            verbose: false,
-        }),
+        new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
                 from: join('src', 'schematics', buildGlob(), '*.schema.json'),
