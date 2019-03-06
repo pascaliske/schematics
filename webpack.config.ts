@@ -8,7 +8,7 @@ import GenerateJsonWebpackPlugin from 'generate-json-webpack-plugin'
 import VisualizerPlugin from 'webpack-visualizer-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import { collection } from './collection'
-import { version, repository } from './package.json'
+import { version } from './package.json'
 
 export interface Schematic {
     id: string
@@ -17,42 +17,37 @@ export interface Schematic {
     hidden?: boolean
 }
 
-const reduce = <T = any>(a: T[], r: (prev: any, curr: T) => object) => a.reduce(r, {})
+const objectify = (f: any) => collection.reduce((p, c) => ({ ...p, ...f(c) }), {})
 
 const buildEntries = (): Entry => {
-    return reduce(collection, (prev: any, { id }: Schematic) => ({
-        ...prev,
+    return objectify(({ id }: Schematic) => ({
         [id]: join(__dirname, 'src', 'schematics', id, `${id}.ts`),
     }))
 }
 
 const buildGlob = (): string => {
+    const glob = collection.map(schematic => schematic.id).join(',')
+
     if (collection.length > 1) {
-        return `{${collection.map(schematic => schematic.id).join(',')}}`
+        return `{${glob}}`
     }
 
-    return collection.map(schematic => schematic.id).join(',')
+    return glob
 }
 
-const buildCollection = (): JsonObject => {
-    return {
-        $schema: '../node_modules/@angular-devkit/schematics/collection-schema.json',
-        extends: ['@schematics/angular'],
-        schematics: reduce(
-            collection,
-            (prev: any, { id, description, aliases, hidden }: Schematic) => ({
-                ...prev,
-                [id]: {
-                    factory: `./${id}/${id}`,
-                    schema: `./${id}/${id}.schema.json`,
-                    description,
-                    ...(aliases && aliases.length > 0 ? { aliases } : {}),
-                    ...(hidden && hidden === true ? { hidden: true } : {}),
-                },
-            }),
-        ),
-    }
-}
+const buildCollection = (): JsonObject => ({
+    $schema: '../node_modules/@angular-devkit/schematics/collection-schema.json',
+    extends: ['@schematics/angular'],
+    schematics: objectify(({ id, description, aliases, hidden }: Schematic) => ({
+        [id]: {
+            factory: `./${id}/${id}`,
+            schema: `./${id}/${id}.schema.json`,
+            description: description || '',
+            aliases: aliases || [],
+            hidden: hidden || false,
+        },
+    })),
+})
 
 /**
  * Config builder for webpack.
@@ -60,7 +55,7 @@ const buildCollection = (): JsonObject => {
  * @param _ - The webpack environment
  * @param argv - Array of webpack cli arguments
  */
-export default (_, argv: any): Configuration => ({
+export default (_: any, argv: any): Configuration => ({
     target: 'node',
     devtool: 'hidden-source-map',
     entry: buildEntries(),
@@ -85,7 +80,6 @@ export default (_, argv: any): Configuration => ({
         new DefinePlugin({
             VERSION: JSON.stringify(version),
             ENVIRONMENT: JSON.stringify(argv.mode),
-            REPOSITORY: JSON.stringify(repository.url),
         }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
@@ -103,7 +97,7 @@ export default (_, argv: any): Configuration => ({
         ]),
         new GenerateJsonWebpackPlugin('collection.json', buildCollection(), null, 2),
         new VisualizerPlugin({
-            filename: './stats.html',
+            filename: 'stats.html',
         }),
     ],
     optimization: {
