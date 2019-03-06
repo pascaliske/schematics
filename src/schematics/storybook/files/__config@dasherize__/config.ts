@@ -1,7 +1,7 @@
 import { configure, addDecorator, addParameters, moduleMetadata } from '@storybook/angular'
 import { withKnobs } from '@storybook/addon-knobs'
 import { create } from '@storybook/theming'
-import { repository } from '../package.json'
+import { <% if (!name) { %>name, <% } %>repository } from '../package.json'
 
 const load = require.context('../projects', true, /.stories.ts$/)
 
@@ -15,7 +15,7 @@ addParameters({
     options: {
         theme: create({
             base: '<%= theme %>',
-            brandTitle: '<%= name %>',
+            brandTitle: <% if (name) { %>'<%= name %>'<% } else { %>name<% } %>,
             brandUrl: repository.url.replace(/.git\/?$/, ''),
         }),
         panelPosition: 'bottom',
