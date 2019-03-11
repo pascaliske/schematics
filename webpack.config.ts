@@ -57,7 +57,7 @@ const buildCollection = (): JsonObject => ({
  */
 export default (_: any, argv: any): Configuration => ({
     target: 'node',
-    devtool: 'hidden-source-map',
+    devtool: 'cheap-source-map',
     entry: buildEntries(),
     module: {
         rules: [
