@@ -3,6 +3,6 @@ export interface StorybookSchema {
     skipScript: boolean
     config: string
     name: string
-    theme: 'normal' | 'dark'
+    theme: 'light' | 'dark'
     port: number
 }
