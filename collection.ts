@@ -11,6 +11,7 @@ export const collection: Schematic[] = [
     },
     {
         id: 'component',
+        aliases: ['c'],
         description: 'Generate a new Angular component including Storybook related files.',
     },
     {

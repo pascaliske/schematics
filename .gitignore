@@ -3,6 +3,7 @@
 Thumbs.db
 
 # ide and editors
+.envrc
 .idea
 .vscode
 .settings
