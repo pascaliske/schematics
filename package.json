@@ -26,7 +26,9 @@
     "lint": "tslint --project tsconfig.json --fix",
     "check": "snyk test && snyk monitor",
     "format": "prettier --config .prettierrc --write \"**/*.{ts,md}\"",
-    "changelog": "standard-changelog"
+    "changelog": "standard-changelog",
+    "link": "yarn run build && yarn link",
+    "unlink": "yarn unlink"
   },
   "publishConfig": {
     "access": "public"
