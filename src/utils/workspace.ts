@@ -1,4 +1,4 @@
-import { Rule, Tree } from '@angular-devkit/schematics'
+import { Rule, Tree, SchematicsException } from '@angular-devkit/schematics'
 import { getWorkspace, updateWorkspace } from '@schematics/angular/utility/config'
 import { WorkspaceSchema } from '@schematics/angular/utility/workspace-models'
 
@@ -31,4 +31,20 @@ export function updateWorkspaceFile(updater: (content: WorkspaceSchema) => Works
             ]),
         )
     }
+}
+
+export function getProjectName(options: any, workspace: WorkspaceSchema): string {
+    if (options.project) {
+        return options.project
+    }
+
+    if (workspace.defaultProject) {
+        return workspace.defaultProject
+    }
+
+    if (Object.keys(workspace.projects).length > 0) {
+        return Object.keys(workspace.projects)[0]
+    }
+
+    throw new SchematicsException('Could not determine project!')
 }

@@ -1,20 +1,13 @@
-import { storiesOf, moduleMetadata } from '@storybook/angular'
-import { withMarkdownNotes } from '@storybook/addon-notes'
-import { withKnobs } from '@storybook/addon-knobs'
+import { storiesOf } from '@storybook/angular'
+import { text } from '@storybook/addon-knobs'
+import { action } from '@storybook/addon-actions'
+
 import { <%= classify(name) %>Component } from './<%= dasherize(name) %>.component'
-import * as <%= classify(name) %>Readme from './<%= dasherize(name) %>.readme.md'
+import <%= classify(name) %>Readme from './<%= dasherize(name) %>.readme.md'
 
 storiesOf('<%= classify(name) %>', module)
-    .addDecorator(withMarkdownNotes(<%= classify(name) %>Readme))
-    .addDecorator(withKnobs())
-    .addDecorator(
-        moduleMetadata({
-            declarations: [],
-        }),
-    )
-    .add('Basic', () => {
-        return {
-            component: <%= classify(name) %>Component,
-            props: {},
-        }
-    })
+    .addParameters({ notes: <%= classify(name) %>Readme })
+    .add('Basic', () => ({
+        component: <%= classify(name) %>Component,
+        props: {},
+    }))

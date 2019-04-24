@@ -13,6 +13,41 @@
         "index": 0
       }
     },
+    "project": {
+      "type": "string",
+      "description": "Name of the destination project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    },
+    "path": {
+      "type": "string",
+      "format": "path",
+      "description": "The path to create the simple component within.",
+      "visible": false
+    },
+    "style": {
+      "description": "The file extension or preprocessor to use for style files.",
+      "type": "string",
+      "default": "scss",
+      "enum": [
+        "css",
+        "scss",
+        "sass",
+        "less",
+        "styl"
+      ]
+    },
+    "spec": {
+      "type": "boolean",
+      "description": "Specifies if a spec file is generated.",
+      "default": false
+    },
+    "flat": {
+      "type": "boolean",
+      "description": "Flag to indicate if a directory is created.",
+      "default": false
+    },
     "skipStory": {
       "type": "boolean",
       "description": "When true, does not create a story for the component.",

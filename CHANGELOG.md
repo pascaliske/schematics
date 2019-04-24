@@ -1,3 +1,25 @@
+## [0.0.5](https://github.com/pascaliske/schematics/compare/v0.0.4...v0.0.5) (2019-04-24)
+
+
+### Bug Fixes
+
+* **component:** correctly extend default angular schematic ([8ea95c2](https://github.com/pascaliske/schematics/commit/8ea95c2))
+* **component:** fix path for story file generation ([39158b8](https://github.com/pascaliske/schematics/commit/39158b8))
+* **component:** update story templates for storybook v5 ([08f56d4](https://github.com/pascaliske/schematics/commit/08f56d4))
+* **component:** update story templates for storybook v5 ([7b300bb](https://github.com/pascaliske/schematics/commit/7b300bb))
+* **storybook:** move module metadata call to config file ([10ac4f9](https://github.com/pascaliske/schematics/commit/10ac4f9))
+* **storybook:** update setup for storybook v5 ([e2f22b5](https://github.com/pascaliske/schematics/commit/e2f22b5))
+* **storybook:** update storybook setup schematic ([6f5df5d](https://github.com/pascaliske/schematics/commit/6f5df5d))
+* **storybook:** use light theme as default and sort stories alphabetically ([aa27437](https://github.com/pascaliske/schematics/commit/aa27437))
+
+
+### Features
+
+* **changelog:** add changelog generator schematic ([ddebced](https://github.com/pascaliske/schematics/commit/ddebced)), closes [#8](https://github.com/pascaliske/schematics/issues/8)
+* **travis:** add ci alias for travis schematic ([b64dc6f](https://github.com/pascaliske/schematics/commit/b64dc6f))
+
+
+
 ## [0.0.4](https://github.com/pascaliske/schematics/compare/v0.0.3...v0.0.4) (2019-02-18)
 
 

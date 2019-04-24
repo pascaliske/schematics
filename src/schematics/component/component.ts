@@ -1,13 +1,8 @@
-import {
-    Rule,
-    Tree,
-    chain,
-    externalSchematic,
-    SchematicsException,
-} from '@angular-devkit/schematics'
+import { Rule, Tree, chain, externalSchematic } from '@angular-devkit/schematics'
 import { getWorkspace } from '@schematics/angular/utility/config'
 import { getProject, buildDefaultPath } from '@schematics/angular/utility/project'
 import { parseName } from '@schematics/angular/utility/parse-name'
+import { getProjectName } from '../../utils/workspace'
 import { renderTemplates } from '../../utils/templates'
 import { conditional } from '../../utils/rules'
 import { ComponentSchema } from './component.schema'
@@ -20,20 +15,24 @@ import { ComponentSchema } from './component.schema'
  */
 export default function(options: ComponentSchema): Rule {
     return (tree: Tree) => {
-        const workspace = getWorkspace(tree)
-        const id = options.project || workspace.defaultProject
-
-        if (!id || id.length === 0) {
-            throw new SchematicsException('Could not determine project!')
-        }
-
+        const id = getProjectName(options, getWorkspace(tree))
         const project = getProject(tree, id)
-        const location = parseName(buildDefaultPath(project), options.name)
+        const location = parseName(options.path || buildDefaultPath(project), options.name)
+
+        options.name = location.name
+        options.path = location.path
 
         return chain([
-            externalSchematic('@schematics/angular', 'component', options),
+            externalSchematic('@schematics/angular', 'component', {
+                project: id,
+                name: options.name,
+                path: options.path,
+                style: options.style,
+                spec: options.spec,
+                flat: options.flat,
+            }),
             conditional(!options.skipStory, [
-                renderTemplates('./files', location.path, {
+                renderTemplates('./files', options.path, {
                     params: options,
                 }),
             ]),

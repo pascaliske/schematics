@@ -26,9 +26,9 @@
       "x-prompt": "Specify the name for storybook."
     },
     "theme": {
-      "enum": ["normal", "dark"],
+      "enum": ["light", "dark"],
       "description": "Specify the theme for storybook.",
-      "default": "dark",
+      "default": "normal",
       "x-prompt": "Specify the theme for storybook. (default: dark)"
     },
     "port": {

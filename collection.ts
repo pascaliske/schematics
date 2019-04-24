@@ -11,6 +11,7 @@ export const collection: Schematic[] = [
     },
     {
         id: 'component',
+        aliases: ['c'],
         description: 'Generate a new Angular component including Storybook related files.',
     },
     {
@@ -27,6 +28,7 @@ export const collection: Schematic[] = [
     },
     {
         id: 'travis',
+        aliases: ['ci'],
         description: 'Integrate Travis CI into your Angular project.',
     },
     {
@@ -36,5 +38,9 @@ export const collection: Schematic[] = [
     {
         id: 'ngw',
         description: 'Integrate ngw into your Angular project.',
+    },
+    {
+        id: 'changelog',
+        description: 'Integrate standard-changelog into your Angular project.',
     },
 ]
