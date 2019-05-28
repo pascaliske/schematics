@@ -36,7 +36,7 @@
   "dependencies": {
     "@angular-devkit/core": "^7.3.8",
     "@angular-devkit/schematics": "^7.3.8",
-    "@schematics/angular": "^7.3.8"
+    "@schematics/angular": "^8.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.5.2",
