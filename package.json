@@ -39,7 +39,7 @@
     "@schematics/angular": "^7.3.8"
   },
   "devDependencies": {
-    "@commitlint/cli": "^7.5.2",
+    "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^7.5.0",
     "@types/node": "^12.0.0",
     "@types/webpack": "^4.4.27",
