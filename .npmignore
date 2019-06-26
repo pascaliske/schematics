@@ -1,10 +1,13 @@
 src
+coverage
 stats.html
 tsconfig.json
 tslint.json
-/.idea
-/.vscode
-/.github
+.DS_Store
+.envrc
+.idea
+.vscode
+.github
 /.settings
 /.commitlintrc.json
 /.editorconfig
@@ -13,6 +16,7 @@ tslint.json
 /.prettierignore
 /.prettierrc
 /.snyk
+/jest.config.js
 /.travis.yml
 /*.ts
 *.code-*
