@@ -1,3 +1,17 @@
+## [0.0.6](https://github.com/pascaliske/schematics/compare/v0.0.5...v0.0.6) (2019-06-26)
+
+
+### Bug Fixes
+
+* **workspace:** fix typing issue ([283e71f](https://github.com/pascaliske/schematics/commit/283e71f))
+
+
+### Features
+
+* **component:** add export flag to component schematic ([ef45c0a](https://github.com/pascaliske/schematics/commit/ef45c0a))
+
+
+
 ## [0.0.5](https://github.com/pascaliske/schematics/compare/v0.0.4...v0.0.5) (2019-04-24)
 
 

@@ -5,5 +5,6 @@ export interface ComponentSchema {
     style: 'css' | 'scss' | 'sass' | 'less' | 'styl'
     spec: boolean
     flat: boolean
+    export: boolean
     skipStory: boolean
 }

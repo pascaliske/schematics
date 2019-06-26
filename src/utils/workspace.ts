@@ -5,7 +5,7 @@ import { WorkspaceSchema } from '@schematics/angular/utility/workspace-models'
 function reorder(workspace: WorkspaceSchema, order: (keyof WorkspaceSchema)[]): WorkspaceSchema {
     const reducer = (prev: WorkspaceSchema, key: keyof WorkspaceSchema) => {
         if (workspace[key]) {
-            prev[key] = workspace[key]
+            prev[key as any] = workspace[key]
         }
 
         return prev
