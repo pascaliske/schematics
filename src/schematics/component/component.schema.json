@@ -48,6 +48,11 @@
       "description": "Flag to indicate if a directory is created.",
       "default": false
     },
+    "export": {
+      "type": "boolean",
+      "description": "Flag to indicate if the component should also be exported.",
+      "default": true
+    },
     "skipStory": {
       "type": "boolean",
       "description": "When true, does not create a story for the component.",
