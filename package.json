@@ -1,7 +1,7 @@
 {
   "name": "@pascaliske/schematics",
   "description": "Angular schematics collection for integrating setup tools like prettier and storybook.",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
