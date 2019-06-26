@@ -1,9 +1,9 @@
 language: node_js
 node_js:
+  - '12'
   - '11'
-  - '10'
 install:
-  - yarn install
+  - yarn install --frozen-lockfile
 script:
   - yarn run build
   - yarn run lint
@@ -17,7 +17,7 @@ deploy:
   on:
     tags: true
     branch: master
-    node: 11
+    node: 12
 env:
   global:
     - secure: Gf/nzNcxVUoc8/l8O2AYhgG5aDMtqSxwnskmHTZpyVg+rYbrL0VZTnx6cKJ2ND2KKReNze3kyRL/VT8rooHJqYMsIh/Xf8s6x9PDkbSz65ARURHXqi3QuLheZ9PutIg2Qyoi6xH7ShdLXU84fcACHkvsfLW5dq4p19nPJoEuOTEoeHPaD9IkkJpfNyxSo4RKFK7rJ/uRA0Z2HrV0lNvu0aTlFHik3rbWjrsgpV8f/Ycl1lkWaONZHBfQuxKl4qWVJjV5MIZjwb1wPTcTHJt/1YBDdeny+QaaA1oBEzTLaO6ldwA81rVXpmnN9pgQBCTph3FHJmXzU719A2ZsVy4OGyfPAI3ttXf3DkvFls7LhfGrHDo3RBX2iYW62EJKwVwjbfvO/h+pvaFkyOtz5Adpz28erInZG75ggniNRuy3xqLQxH5Frc0ckON62OM+NlK6tdQbLu4ToHSDCUNEqlS+uvh5wtrAcr/71Vb8jJ9SHnfl04MJnqMeFofYe0h3fUo9g6RxutrHeAM6Yp0EeEiKSopxFBhcAO44gkByBcdcvoUgl2C6fQA6eg65F7nxIs4YmLfbtVGjTGM4NvALipKcdpEV/WPcwXC3TLAmazZAx1Sg7z1698aXe7tU5rxF77nYqZ1fII08K7oG+unPnvb3LywswNeKKCp4BOYjG7NK1yc=

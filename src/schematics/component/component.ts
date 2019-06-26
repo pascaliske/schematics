@@ -30,6 +30,7 @@ export default function(options: ComponentSchema): Rule {
                 style: options.style,
                 spec: options.spec,
                 flat: options.flat,
+                export: options.export,
             }),
             conditional(!options.skipStory, [
                 renderTemplates('./files', options.path, {
