@@ -1,3 +1,7 @@
+## [0.0.7](https://github.com/pascaliske/schematics/compare/v0.0.6...v0.0.7) (2019-06-27)
+
+
+
 ## [0.0.6](https://github.com/pascaliske/schematics/compare/v0.0.5...v0.0.6) (2019-06-26)
 
 
