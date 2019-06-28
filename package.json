@@ -1,7 +1,7 @@
 {
   "name": "@pascaliske/schematics",
   "description": "Angular schematics collection for integrating setup tools like prettier and storybook.",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "license": "MIT",
   "author": {
     "name": "Pascal Iske",
@@ -41,7 +41,7 @@
   "devDependencies": {
     "@commitlint/cli": "^8.0.0",
     "@commitlint/config-conventional": "^8.0.0",
-    "@pascaliske/tsconfig": "^1.0.2",
+    "@pascaliske/tsconfig": "^1.0.3",
     "@types/node": "^12.0.10",
     "@types/webpack": "^4.4.34",
     "clean-webpack-plugin": "^3.0.0",
