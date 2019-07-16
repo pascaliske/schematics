@@ -39,6 +39,9 @@
     "@angular-devkit/schematics": "^8.0.6",
     "@schematics/angular": "^8.1.1"
   },
+  "optionalDependencies": {
+    "fsevents": "1.2.9"
+  },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
