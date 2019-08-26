@@ -43,7 +43,7 @@
     "@commitlint/config-conventional": "^8.1.0",
     "@pascaliske/tsconfig": "^1.0.4",
     "@types/node": "^12.7.2",
-    "@types/webpack": "^4.39.0",
+    "@types/webpack": "^4.39.1",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.0.4",
     "generate-json-webpack-plugin": "^0.3.1",
