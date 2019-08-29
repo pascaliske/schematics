@@ -2,17 +2,6 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.1.tgz#6be526bd9c6351b1aaac3e9a083fbbeecdb9c848"
-  integrity sha512-H92REifFygP4a/0fsnshiz31KsuaHRrRHwfT67tVxPnN8rwWnTWkf5gxFwG8ezcBMnR5eVLBb/Xisnc/+A/8Kw==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
-
 "@angular-devkit/core@8.3.2", "@angular-devkit/core@^8.3.1":
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.2.tgz#0e570f1fbb8888befc100f9a95eb6c63fd70594a"
@@ -24,15 +13,7 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.1.tgz#aa3cfe54e047bba0f3eb7e641e7afdf6df3d32ae"
-  integrity sha512-huGBmBeRCNCD8Li+whOnv2ma5R048tWJ/e03rz7BV9lHqHM706LT4UPZhtV3t683O+LgsUZjxgnhAe9GLIJNbg==
-  dependencies:
-    "@angular-devkit/core" "8.3.1"
-    rxjs "6.4.0"
-
-"@angular-devkit/schematics@^8.3.2":
+"@angular-devkit/schematics@8.3.2", "@angular-devkit/schematics@^8.3.2":
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.2.tgz#5aa4c014537b2a1fc8e234cef98cc683a2852bf2"
   integrity sha512-WwiHtDeW7+Gw5pukdjyuwQ+Ino7AFnoKUqqYrsTwPnNky+p8JVT4tY6jTxwenOLOVsLSDz5oVn9jk5u70HLX4Q==
@@ -243,13 +224,13 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@schematics/angular@^8.3.1":
-  version "8.3.1"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.1.tgz#211746e50b459e53974a24a202ed97aac5fed0d0"
-  integrity sha512-i9jkGs7WgcrfkFDJ3fk41/T6dJvg+inhOpK7pL+obi4Lw/dU2KRW+WRnJmurIW8rML5D3g6OoOKSZ6hBAqf0vQ==
+"@schematics/angular@^8.3.2":
+  version "8.3.2"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.2.tgz#8d724b8450a1cbf02b5a7172e1cb46f75d62c686"
+  integrity sha512-kDT5lhr488NpqS4OKn8B9VUwl5AUNqRkLLqWgNHvxQcV1OtLhVJVw4ih1vhrH7wlUd39EwnRqtBX+53cg2PDmA==
   dependencies:
-    "@angular-devkit/core" "8.3.1"
-    "@angular-devkit/schematics" "8.3.1"
+    "@angular-devkit/core" "8.3.2"
+    "@angular-devkit/schematics" "8.3.2"
 
 "@snyk/cli-interface@^2.0.2":
   version "2.0.2"
