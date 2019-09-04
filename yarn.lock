@@ -13,7 +13,7 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/core@^8.3.3":
+"@angular-devkit/core@8.3.3", "@angular-devkit/core@^8.3.3":
   version "8.3.3"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.3.tgz#75777ad5a23904a20022c0ec1e60843c647d8602"
   integrity sha512-E49GCnn06q79Xd5SC/+8CDRF1wp9wQqP6HKJVVMijoi3NOrMQTuHTesPURvve2xbkCYqQOVlMEonhOJF5vpnoQ==
@@ -24,12 +24,20 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.3.2", "@angular-devkit/schematics@^8.3.2":
+"@angular-devkit/schematics@8.3.2":
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.2.tgz#5aa4c014537b2a1fc8e234cef98cc683a2852bf2"
   integrity sha512-WwiHtDeW7+Gw5pukdjyuwQ+Ino7AFnoKUqqYrsTwPnNky+p8JVT4tY6jTxwenOLOVsLSDz5oVn9jk5u70HLX4Q==
   dependencies:
     "@angular-devkit/core" "8.3.2"
+    rxjs "6.4.0"
+
+"@angular-devkit/schematics@^8.3.3":
+  version "8.3.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.3.tgz#f86581b6656552c728b7b80b59717b1567dff45b"
+  integrity sha512-t5I77YeRCWpr5PJMQn8iCu2zHqnQt7qqxt66ejmsDnFgCQDw2G1IQl48AzjegJybIoRCaWX12yUZaS5aaJm5Cg==
+  dependencies:
+    "@angular-devkit/core" "8.3.3"
     rxjs "6.4.0"
 
 "@babel/code-frame@^7.0.0":
