@@ -34,7 +34,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@angular-devkit/core": "^8.3.3",
+    "@angular-devkit/core": "^8.3.6",
     "@angular-devkit/schematics": "^8.3.5",
     "@schematics/angular": "^8.3.5"
   },
