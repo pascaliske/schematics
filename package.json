@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@angular-devkit/core": "^8.3.12",
-    "@angular-devkit/schematics": "^8.3.16",
+    "@angular-devkit/schematics": "^8.3.18",
     "@schematics/angular": "^8.3.17"
   },
   "devDependencies": {
