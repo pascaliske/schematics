@@ -2,10 +2,21 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@8.3.18", "@angular-devkit/core@^8.3.12":
+"@angular-devkit/core@8.3.18":
   version "8.3.18"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.18.tgz#442596384965371d7c88908716bb0985f11b714d"
   integrity sha512-SPlQmBlrcaKZeE9srvuFElcen9iOled4lkD3M4cGwe56u6YoJ71oTAtmGiw9nofTtW0PghGVq8WdDQG5BRqX8Q==
+  dependencies:
+    ajv "6.10.2"
+    fast-json-stable-stringify "2.0.0"
+    magic-string "0.25.3"
+    rxjs "6.4.0"
+    source-map "0.7.3"
+
+"@angular-devkit/core@^8.3.19":
+  version "8.3.19"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.19.tgz#c3310bfdbd456c6301ed33713c7b58fea7822f5b"
+  integrity sha512-NTNxSpRB6zMlqsuWLHs2F6QuypIb/XUitMkJy2P7Ee3kZfCYvvH9cCkiQqkwEhKw6J01qKeXwOElmxnqmF291w==
   dependencies:
     ajv "6.10.2"
     fast-json-stable-stringify "2.0.0"
