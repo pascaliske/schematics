@@ -1,4 +1,4 @@
-import { Rule, Tree, SchematicsException } from '@angular-devkit/schematics'
+import { Rule, Tree, SchematicContext, SchematicsException } from '@angular-devkit/schematics'
 import { getWorkspace, updateWorkspace } from '@schematics/angular/utility/config'
 import { WorkspaceSchema } from '@schematics/angular/utility/workspace-models'
 
@@ -14,10 +14,12 @@ function reorder(workspace: WorkspaceSchema, order: (keyof WorkspaceSchema)[]): 
     return order.reduce<WorkspaceSchema>(reducer, {} as any)
 }
 
-export function updateWorkspaceFile(updater: (content: WorkspaceSchema) => WorkspaceSchema): Rule {
-    return (tree: Tree): any => {
+export function updateWorkspaceFile(
+    updater: (content: WorkspaceSchema, tree: Tree, context: SchematicContext) => WorkspaceSchema,
+): Rule {
+    return (tree: Tree, context: SchematicContext): any => {
         const workspace: WorkspaceSchema = getWorkspace(tree)
-        const update: WorkspaceSchema = updater(workspace)
+        const update: WorkspaceSchema = updater(workspace, tree, context)
 
         return updateWorkspace(
             reorder(update, [
