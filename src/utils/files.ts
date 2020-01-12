@@ -37,3 +37,18 @@ export function updateFile(file: string, updater: (content: string) => string): 
         return tree
     }
 }
+
+/**
+ * Allows deleting the given file.
+ *
+ * @param file - The file to delete
+ * @returns - A schematic rule
+ */
+export function deleteFiles(files: string[]): Rule {
+    return (tree: Tree, _context: SchematicContext) => {
+        files.forEach(file => {
+            tree.delete(file)
+        })
+        return tree
+    }
+}
