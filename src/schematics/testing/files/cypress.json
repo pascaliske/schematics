@@ -1,0 +1,11 @@
+{
+  "baseUrl": "<%= baseUrl %>",
+  "projectId": "<%= projectId %>",
+  "supportFile": "<%= supportFile %>",
+  "pluginsFile": "<%= pluginsFile %>",
+  "integrationFolder": "<%= integrationFolder %>",
+  "fixturesFolder": "<%= fixturesFolder %>",
+  "viewportWidth": <%= viewportWidth %>,
+  "viewportHeight": <%= viewportHeight %>,
+  "env": {}
+}

@@ -1,0 +1,68 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "id": "@pascaliske/schematics/testing",
+  "title": "Integrate cypress and jest testing into your Angular project.",
+  "type": "object",
+  "properties": {
+    "skipInstall": {
+      "type": "boolean",
+      "description": "When true, does not install dependency packages.",
+      "default": false
+    },
+    "skipScript": {
+      "type": "boolean",
+      "description": "Skip npm script setup for prettier.",
+      "default": false
+    },
+    "baseUrl": {
+      "type": "string",
+      "description": "The base url of cypress.",
+      "default": "http://localhost:4200",
+      "x-prompt": "Specify the base url of cypress."
+    },
+    "projectId": {
+      "type": "string",
+      "description": "The cypress project id.",
+      "default": "",
+      "x-prompt": "Enter your cypress project id."
+    },
+    "supportFile": {
+      "type": "string",
+      "description": "The support file of cypress.",
+      "default": "cypress/support/index.ts",
+      "x-prompt": "Specify the support file of cypress."
+    },
+    "pluginsFile": {
+      "type": "string",
+      "description": "The plugins file of cypress.",
+      "default": "cypress/plugins/index.js",
+      "x-prompt": "Specify the plugins file of cypress."
+    },
+    "integrationFolder": {
+      "type": "string",
+      "description": "The integration folder of cypress.",
+      "default": "cypress/integration",
+      "x-prompt": "Specify the integration folder of cypress."
+    },
+    "fixturesFolder": {
+      "type": "string",
+      "description": "The fixtures folder of cypress.",
+      "default": "cypress/fixtures",
+      "x-prompt": "Specify the fixtures folder of cypress."
+    },
+    "viewportWidth": {
+      "type": "number",
+      "description": "The viewport width used by cypress.",
+      "default": 1920,
+      "x-prompt": "The viewport width used by cypress."
+    },
+    "viewportHeight": {
+      "type": "number",
+      "description": "The viewport height used by cypress.",
+      "default": 1080,
+      "x-prompt": "The viewport height used by cypress."
+    }
+  },
+  "required": [],
+  "additionalProperties": false
+}

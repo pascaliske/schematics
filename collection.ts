@@ -44,8 +44,7 @@ export const collection: Schematic[] = [
         description: 'Integrate standard-changelog into your Angular project.',
     },
     {
-        id: 'cypress',
-        aliases: ['cy'],
-        description: 'Integrate cypress into your Angular project.',
+        id: 'testing',
+        description: 'Integrate cypress and jest testing into your Angular project.',
     },
 ]
