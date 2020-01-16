@@ -2,18 +2,7 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@8.3.22":
-  version "8.3.22"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.22.tgz#085cc1cf356cec00d0a1cea83ef1f21277f5ff55"
-  integrity sha512-lOEYcvK3MktjR9YZT/cUjiQE5dZxl8rZ/vgWgwDiL7RtzfXTt8lPapoJe7YKS53gLbUYiBNPCtTyTAqnslWgGA==
-  dependencies:
-    ajv "6.10.2"
-    fast-json-stable-stringify "2.0.0"
-    magic-string "0.25.3"
-    rxjs "6.4.0"
-    source-map "0.7.3"
-
-"@angular-devkit/core@^8.3.23":
+"@angular-devkit/core@8.3.23", "@angular-devkit/core@^8.3.23":
   version "8.3.23"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.23.tgz#612bf8a76b1ccde40cd6a5e85a02dc083bb666c6"
   integrity sha512-y++LN6R/fu+obPUKEMDSKZ5FzeWN5rV0Z8vrdC+uF02VJLv/5QI/dUx3ROKFzJO3m2LU6EAuo5b/TLAPq4ving==
@@ -24,12 +13,12 @@
     rxjs "6.4.0"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@8.3.22", "@angular-devkit/schematics@^8.3.22":
-  version "8.3.22"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.22.tgz#41461768cc6cf54708d55311e59b9defa7bff484"
-  integrity sha512-ETLdV1ftT+ZuuiHl6FjFQ4XLQznWMcxWognX+qgByn+DQOXsYRRvZK1L5eG/SG8CKJ8NL5oteTDloDnghARHFw==
+"@angular-devkit/schematics@8.3.23", "@angular-devkit/schematics@^8.3.22":
+  version "8.3.23"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-8.3.23.tgz#c5232d74ce6595955961aeb0b6b48dda1f047b88"
+  integrity sha512-O8i/vn6YfqbT0q7o4jsVOTnWE07T1tcvk2zJ4O/1ete2z+Z2aw1YtIddwXEGJNCDpeE0B7f2sUHoLOS4Jc4O9w==
   dependencies:
-    "@angular-devkit/core" "8.3.22"
+    "@angular-devkit/core" "8.3.23"
     rxjs "6.4.0"
 
 "@babel/code-frame@^7.0.0":
@@ -242,13 +231,13 @@
   dependencies:
     any-observable "^0.3.0"
 
-"@schematics/angular@^8.3.22":
-  version "8.3.22"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.22.tgz#fab009312bd3d50115332f2c41a92e15744ac09f"
-  integrity sha512-vD+UgPdbEoFPOH6xe2laFpHn/MC9R5C4A/+J9yQ6HBg5kt1YdyIBakvPOcXQCyWr5VZzDmTyMO76rd3zaef3DQ==
+"@schematics/angular@^8.3.23":
+  version "8.3.23"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-8.3.23.tgz#8f46c4673eca3fadc46b2d43c4367e5542be624e"
+  integrity sha512-yisP1iCLGC4VnZNC3kOnYyTS5cmfKEnLM9bMzhZGMWwov9RRfdxKKeSnG9FJNwHxI0WjQ0UWwfiz1dj0YacG3g==
   dependencies:
-    "@angular-devkit/core" "8.3.22"
-    "@angular-devkit/schematics" "8.3.22"
+    "@angular-devkit/core" "8.3.23"
+    "@angular-devkit/schematics" "8.3.23"
 
 "@snyk/cli-interface@1.5.0":
   version "1.5.0"
