@@ -47,7 +47,7 @@
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "generate-json-webpack-plugin": "^0.3.1",
-    "husky": "^4.0.10",
+    "husky": "^4.1.0",
     "lint-staged": "^10.0.1",
     "prettier": "^1.19.1",
     "rxjs-tslint-rules": "^4.28.1",
