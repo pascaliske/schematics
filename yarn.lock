@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@8.3.25", "@angular-devkit/core@^8.3.25":
+"@angular-devkit/core@8.3.25":
   version "8.3.25"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.3.25.tgz#8133a18be811424f10a10f37c712165b0f69f3fc"
   integrity sha512-l7Gqy1tMrTpRmPVlovcFX8UA3mtXRlgO8kcSsbJ9MKRKNTCcxlfsWEYY5igyDBUVh6ADkgSIu0nuk31ZGTe0lw==
@@ -11,6 +11,17 @@
     fast-json-stable-stringify "2.0.0"
     magic-string "0.25.3"
     rxjs "6.4.0"
+    source-map "0.7.3"
+
+"@angular-devkit/core@^9.0.3":
+  version "9.0.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-9.0.3.tgz#a027862d2edd981afcc6245176e9f27768c631c9"
+  integrity sha512-3+abmv9K9d+BVgUAolYgoOqlGAA2Jb1pWo2biapSDG6KjUZHUCJdnsKigLtLorCdv0SrjTp56FFplkcqKsFQgA==
+  dependencies:
+    ajv "6.10.2"
+    fast-json-stable-stringify "2.0.0"
+    magic-string "0.25.4"
+    rxjs "6.5.3"
     source-map "0.7.3"
 
 "@angular-devkit/schematics@8.3.25", "@angular-devkit/schematics@^8.3.25":
@@ -3813,6 +3824,13 @@ magic-string@0.25.3:
   dependencies:
     sourcemap-codec "^1.4.4"
 
+magic-string@0.25.4:
+  version "0.25.4"
+  resolved "https://registry.yarnpkg.com/magic-string/-/magic-string-0.25.4.tgz#325b8a0a79fc423db109b77fd5a19183b7ba5143"
+  integrity sha512-oycWO9nEVAP2RVPbIoDoA4Y7LFIJ3xRYov93gAyJhZkET1tNuB0u7uWkZS2LpBWTJUWnmau/To8ECWRC+jKNfw==
+  dependencies:
+    sourcemap-codec "^1.4.4"
+
 make-dir@^1.0.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/make-dir/-/make-dir-1.3.0.tgz#79c1033b80515bd6d24ec9933e860ca75ee27f0c"
@@ -5337,10 +5355,10 @@ rxjs@6.4.0:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.3.3, rxjs@^6.4.0:
-  version "6.5.1"
-  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.1.tgz#f7a005a9386361921b8524f38f54cbf80e5d08f4"
-  integrity sha512-y0j31WJc83wPu31vS1VlAFW5JGrnGC+j+TtGAa1fRQphy48+fDYiDmX8tjGloToEsMkxnouOg/1IzXGKkJnZMg==
+rxjs@6.5.3, rxjs@^6.3.3, rxjs@^6.4.0:
+  version "6.5.3"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.3.tgz#510e26317f4db91a7eb1de77d9dd9ba0a4899a3a"
+  integrity sha512-wuYsAYYFdWTAnAaPoKGNhfpWwKZbJW+HgAJ+mImp+Epl7BG8oNWBCTyRM8gba9k4lk8BgWdoYm21Mo/RYhhbgA==
   dependencies:
     tslib "^1.9.0"
 
