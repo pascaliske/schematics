@@ -1,5 +1,5 @@
 {
-  "$schema": "http://json-schema.org/schema",
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
   "id": "@pascaliske/schematics/ng-add",
   "title": "Add the schematic collection to your Angular project.",
   "type": "object",
