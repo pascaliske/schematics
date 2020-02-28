@@ -36,9 +36,9 @@
   },
   "prettier": "@pascaliske/prettier-config",
   "dependencies": {
-    "@angular-devkit/core": "^8.3.25",
-    "@angular-devkit/schematics": "^8.3.25",
-    "@schematics/angular": "^8.3.25"
+    "@angular-devkit/core": "^9.0.4",
+    "@angular-devkit/schematics": "^9.0.4",
+    "@schematics/angular": "^9.0.4"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.5",
@@ -60,7 +60,7 @@
     "terser-webpack-plugin": "^2.3.5",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.6.2",
-    "tslint": "^5.20.1",
+    "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "~3.8.2",
     "webpack": "^4.41.6",
