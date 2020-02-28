@@ -1,3 +1,12 @@
+## [0.0.9](https://github.com/pascaliske/schematics/compare/v0.0.8...v0.0.9) (2020-02-28)
+
+
+### Bug Fixes
+
+* use secure and versioned json schema urls ([21ac6ab](https://github.com/pascaliske/schematics/commit/21ac6ab08a26db552eb6a2a143b2d159066db818))
+
+
+
 ## [0.0.8](https://github.com/pascaliske/schematics/compare/v0.0.7...v0.0.8) (2019-06-28)
 
 
