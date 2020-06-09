@@ -1,7 +1,7 @@
 language: node_js
 node_js:
-  - '12'
-  - '11'
+  - '14'
+  - '13'
 install:
   - yarn install --frozen-lockfile
 script:
@@ -16,7 +16,7 @@ deploy:
   on:
     tags: true
     branch: master
-    node: 12
+    node: 14
 notifications:
   slack:
     rooms:
