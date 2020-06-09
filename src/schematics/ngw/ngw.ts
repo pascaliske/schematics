@@ -6,7 +6,7 @@ import { renderTemplates } from '../../utils/templates'
 import { NgwSchema } from './ngw.schema'
 import { addScript } from '../../utils/scripts'
 
-export default function(options: NgwSchema): Rule {
+export default function (options: NgwSchema): Rule {
     return chain([
         addDependencies(NodeDependencyType.Dev, [
             '@types/node',

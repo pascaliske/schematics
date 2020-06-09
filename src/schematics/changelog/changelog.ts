@@ -11,7 +11,7 @@ import { ChangelogSchema } from './changelog.schema'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(options: ChangelogSchema): Rule {
+export default function (options: ChangelogSchema): Rule {
     return chain([
         addDependencies(NodeDependencyType.Dev, ['standard-changelog']),
         conditional(!options.skipScript, [addScript('changelog', 'standard-changelog')]),

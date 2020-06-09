@@ -1,6 +1,6 @@
 import { Rule, Tree, SchematicContext, SchematicsException } from '@angular-devkit/schematics'
 
-export function readSafe(tree: Tree, file: string, charset: string = 'utf-8'): string {
+export function readSafe(tree: Tree, file: string, charset: BufferEncoding = 'utf-8'): string {
     const buffer = tree.read(file)
 
     if (buffer === null) {
