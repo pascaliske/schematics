@@ -7,6 +7,8 @@ install:
 script:
   - yarn run build
   - yarn run lint
+  - yarn run test
+  - yarn run coverage
 deploy:
   provider: npm
   email: info@pascal-iske.de

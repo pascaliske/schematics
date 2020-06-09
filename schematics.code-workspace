@@ -15,7 +15,6 @@
         "editor.formatOnPaste": true,
         "editor.formatOnSave": true,
         "tslint.exclude": "**/files/**/*",
-        "tslint.autoFixOnSave": true,
         "typescript.tsdk": "node_modules/typescript/lib",
         "prettier.ignorePath": ".prettierignore",
         "[javascript]": {

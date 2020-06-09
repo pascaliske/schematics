@@ -1,0 +1,4 @@
+{
+  "preset": "ts-jest",
+  "collectCoverageFrom": ["src/schematics/*/*.ts"]
+}
