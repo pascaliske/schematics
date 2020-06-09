@@ -12,7 +12,7 @@ import { CommitLintSchema } from './commit-lint.schema'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(options: CommitLintSchema): Rule {
+export default function (options: CommitLintSchema): Rule {
     return chain([
         addDependencies(NodeDependencyType.Dev, [
             '@commitlint/cli',

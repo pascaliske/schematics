@@ -24,7 +24,7 @@
     "watch": "webpack --config webpack.config.ts --progress --mode development --watch",
     "build": "webpack --config webpack.config.ts --progress --mode production",
     "lint": "tslint --project tsconfig.json --fix",
-    "format": "prettier --config .prettierrc --write \"**/*.{ts,md}\"",
+    "format": "prettier --write \"**/*.{ts,md}\"",
     "version": "bump --yes package.json",
     "changelog": "standard-changelog",
     "link": "yarn run build && yarn link",

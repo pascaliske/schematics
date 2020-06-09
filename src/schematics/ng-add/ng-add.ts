@@ -8,7 +8,7 @@ import { NgAddSchema } from './ng-add.schema'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(_options: NgAddSchema): Rule {
+export default function (_options: NgAddSchema): Rule {
     return updateWorkspaceFile(workspace => {
         const { cli = {} } = workspace
 

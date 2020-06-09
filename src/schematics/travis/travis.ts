@@ -8,7 +8,7 @@ import { renderTemplates } from '../../utils/templates'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(options: TravisSchema): Rule {
+export default function (options: TravisSchema): Rule {
     return chain([
         renderTemplates('./files', './', {
             params: {

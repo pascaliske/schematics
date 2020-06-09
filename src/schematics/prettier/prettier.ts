@@ -13,7 +13,7 @@ import { PrettierSchema } from './prettier.schema'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(options: PrettierSchema): Rule {
+export default function (options: PrettierSchema): Rule {
     const hasExcludes = () => options.excludes && options.excludes.split(',').length > 0
 
     return chain([

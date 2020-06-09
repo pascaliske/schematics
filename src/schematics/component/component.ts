@@ -13,7 +13,7 @@ import { ComponentSchema } from './component.schema'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(options: ComponentSchema): Rule {
+export default function (options: ComponentSchema): Rule {
     return (tree: Tree) => {
         const id = getProjectName(options, getWorkspace(tree))
         const project = getProject(tree, id)
