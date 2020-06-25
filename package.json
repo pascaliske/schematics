@@ -35,7 +35,7 @@
   },
   "prettier": "@pascaliske/prettier-config",
   "dependencies": {
-    "@angular-devkit/core": "^9.1.8",
+    "@angular-devkit/core": "^10.0.0",
     "@angular-devkit/schematics": "^9.1.9",
     "@schematics/angular": "^9.1.9"
   },
