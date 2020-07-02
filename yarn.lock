@@ -2,6 +2,17 @@
 # yarn lockfile v1
 
 
+"@angular-devkit/core@10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.0.1.tgz#acc1c6a088507e7340964c8cbf85e91781e86686"
+  integrity sha512-AXsxN00zbixi/9HyzzsDGm6rtMferxKfhG8WPJfp/0TLeJrmiLs5wdNjk8LhfTZABSTYx/QxRgOI6OnBoXePgg==
+  dependencies:
+    ajv "6.12.2"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.5.5"
+    source-map "0.7.3"
+
 "@angular-devkit/core@9.1.9", "@angular-devkit/core@^9.1.8":
   version "9.1.9"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-9.1.9.tgz#e6283912093179313ccfc69856841e9b6b318231"
@@ -13,7 +24,7 @@
     rxjs "6.5.4"
     source-map "0.7.3"
 
-"@angular-devkit/schematics@9.1.9", "@angular-devkit/schematics@^9.1.9":
+"@angular-devkit/schematics@9.1.9":
   version "9.1.9"
   resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-9.1.9.tgz#1369ee586cb91ffebf12673bb839d31ad5c00357"
   integrity sha512-aKuMmS3wshOTl9+01jiB50ml09fRN1WfOOtoNqwvKTEi87DrT6Mn3l0eVQo8PJK/bIq/FBmPgsIl2nsETiBSxg==
@@ -21,6 +32,15 @@
     "@angular-devkit/core" "9.1.9"
     ora "4.0.3"
     rxjs "6.5.4"
+
+"@angular-devkit/schematics@^10.0.1":
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-10.0.1.tgz#2631043e7459c5d1228ffeba18eb63aa1e45f40e"
+  integrity sha512-lG70f4KsZews/z1npzJC7ccJgz3RXyLetyg+wa5uGWV+Silpr7XX+3U65DjPwG/+921woifeqRMbOhK+zCCaVA==
+  dependencies:
+    "@angular-devkit/core" "10.0.1"
+    ora "4.0.4"
+    rxjs "6.5.5"
 
 "@babel/code-frame@^7.0.0":
   version "7.0.0"
@@ -629,7 +649,7 @@ ajv@6.12.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.2:
+ajv@6.12.2, ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.2:
   version "6.12.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
   integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
@@ -3791,6 +3811,20 @@ ora@4.0.3:
     strip-ansi "^6.0.0"
     wcwidth "^1.0.1"
 
+ora@4.0.4:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/ora/-/ora-4.0.4.tgz#e8da697cc5b6a47266655bf68e0fb588d29a545d"
+  integrity sha512-77iGeVU1cIdRhgFzCK8aw1fbtT1B/iZAvWjS+l/o1x0RShMgxHUZaD2yDpWsNCPwXg9z1ZA78Kbdvr8kBmG/Ww==
+  dependencies:
+    chalk "^3.0.0"
+    cli-cursor "^3.1.0"
+    cli-spinners "^2.2.0"
+    is-interactive "^1.0.0"
+    log-symbols "^3.0.0"
+    mute-stream "0.0.8"
+    strip-ansi "^6.0.0"
+    wcwidth "^1.0.1"
+
 os-browserify@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/os-browserify/-/os-browserify-0.3.0.tgz#854373c7f5c2315914fc9bfc6bd8238fdda1ec27"
@@ -4580,7 +4614,7 @@ rxjs@6.5.4:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.5.5:
+rxjs@6.5.5, rxjs@^6.5.5:
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
   integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
