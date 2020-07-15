@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@9.1.11", "@angular-devkit/core@^9.1.8":
+"@angular-devkit/core@9.1.11":
   version "9.1.11"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-9.1.11.tgz#a2de3de721488164297bfccefcb08f28a7a9108e"
   integrity sha512-uiEkDvWfMgPHuO4jVgBEr9Kl/LuxHaWYGD2ZtKsOnnHYZyRGp61ot7UcDF+KNdXTiq01JJH84VTd3IttEewmhQ==
@@ -11,6 +11,17 @@
     fast-json-stable-stringify "2.1.0"
     magic-string "0.25.7"
     rxjs "6.5.4"
+    source-map "0.7.3"
+
+"@angular-devkit/core@^10.0.3":
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.0.3.tgz#7654766c9f2d3c510beaad8bca3e2a71643c6b8e"
+  integrity sha512-m27ogjq44j80x64RnEswSvy8UewUqeCVJBbEuY6fzrWoaiCf12sgPlrSCwjwfhtQrLgl1e/i9zYA7U6ulGRXyg==
+  dependencies:
+    ajv "6.12.2"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.5.5"
     source-map "0.7.3"
 
 "@angular-devkit/schematics@9.1.11", "@angular-devkit/schematics@^9.1.11":
@@ -629,7 +640,7 @@ ajv@6.12.0:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.2:
+ajv@6.12.2, ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.2:
   version "6.12.2"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
   integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
@@ -4567,7 +4578,7 @@ rxjs@6.5.4:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.5.5:
+rxjs@6.5.5, rxjs@^6.5.5:
   version "6.5.5"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.5.5.tgz#c5c884e3094c8cfee31bf27eb87e54ccfc87f9ec"
   integrity sha512-WfQI+1gohdf0Dai/Bbmk5L5ItH5tYqm3ki2c5GdWhKjalzjg93N3avFjVStyZZz+A2Em+ZxKH5bNghw9UeylGQ==
