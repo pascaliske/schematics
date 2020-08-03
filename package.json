@@ -17,7 +17,8 @@
   },
   "keywords": [
     "angular",
-    "schematics"
+    "schematics",
+    "collection"
   ],
   "schematics": "./dist/collection.json",
   "scripts": {
