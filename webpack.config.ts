@@ -63,7 +63,7 @@ export default (_: any, argv: any): Configuration => ({
     },
     externals: [
         externals({
-            whitelist: ['npm-registry-client'],
+            allowlist: ['npm-registry-client'],
         }),
     ],
     plugins: [
