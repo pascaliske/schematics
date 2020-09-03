@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@10.0.8", "@angular-devkit/core@^10.0.5":
+"@angular-devkit/core@10.0.8":
   version "10.0.8"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.0.8.tgz#ca4ea9f464cfa7ff17e2dab3bcd4c59da1ea450d"
   integrity sha512-d9S8VQuqaYg0c/Y2kl/MtICtZ+UKlH5bLm8y2fb2WfSL4A5XIqMGdEVxzFSiR0b1Bnt4NAoQMcBec1blHAqMSQ==
@@ -11,6 +11,17 @@
     fast-json-stable-stringify "2.1.0"
     magic-string "0.25.7"
     rxjs "6.5.5"
+    source-map "0.7.3"
+
+"@angular-devkit/core@^10.1.0":
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.1.0.tgz#3e4d6abc0b949f4e2fba94077d17c132eb0a673f"
+  integrity sha512-oNRwAX+5uEwgheS3UUc1W+AerbimqGojCOTdWWcq5XtSviZnBCp1FeMZV+eB6XgUWfbmbWBu39S3sCYmXVHLwg==
+  dependencies:
+    ajv "6.12.4"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.2"
     source-map "0.7.3"
 
 "@angular-devkit/schematics@10.0.8", "@angular-devkit/schematics@^10.0.8":
@@ -618,17 +629,7 @@ ajv@6.12.3:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^6.1.0, ajv@^6.10.2:
-  version "6.12.2"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.2.tgz#c629c5eced17baf314437918d2da88c99d5958cd"
-  integrity sha512-k+V+hzjm5q/Mr8ef/1Y9goCmlsK4I6Sm74teeyGvFk1XrOsbsKLjEdrvny42CZ+a8sXbk8KWpY/bDwS+FLL2UQ==
-  dependencies:
-    fast-deep-equal "^3.1.1"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.4.1"
-    uri-js "^4.2.2"
-
-ajv@^6.12.4:
+ajv@6.12.4, ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.4:
   version "6.12.4"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.4.tgz#0614facc4522127fa713445c6bfd3ebd376e2234"
   integrity sha512-eienB2c9qVQs2KWexhkrdMLVDoIQCz5KSeLxwg9Lzk4DOfBtIK9PQwwufcsn1jjGuf9WZmqPMbGxOzfcuphJCQ==
@@ -4641,7 +4642,7 @@ rxjs@6.5.5:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.6.2:
+rxjs@6.6.2, rxjs@^6.6.2:
   version "6.6.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.2.tgz#8096a7ac03f2cc4fe5860ef6e572810d9e01c0d2"
   integrity sha512-BHdBMVoWC2sL26w//BCu3YzKT4s2jip/WhwsGEDmeKYBhKDZeYezVUnHatYB7L85v5xs0BAQmg6BEYJEKxBabg==
