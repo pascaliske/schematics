@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@10.2.0", "@angular-devkit/core@^10.1.7":
+"@angular-devkit/core@10.2.0":
   version "10.2.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.2.0.tgz#fcde160afc2786d2da0166526f065c6cf98684c0"
   integrity sha512-XAszFhSF3mZw1VjoOsYGbArr5NJLcStjOvcCGjBPl1UBM2AKpuCQXHxI9XJGYKL3B93Vp5G58d8qkHvamT53OA==
@@ -11,6 +11,17 @@
     fast-json-stable-stringify "2.1.0"
     magic-string "0.25.7"
     rxjs "6.6.2"
+    source-map "0.7.3"
+
+"@angular-devkit/core@^11.2.10":
+  version "11.2.10"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-11.2.10.tgz#ddf37ecbac9af8e0d2801c1827e81e9b3431241d"
+  integrity sha512-3QBluhsnXsntbl0ybHuXtuH/HBChqibXKmzrENj2n+SKlHFOYhE9PJCSfE6q1kwKN+zg6avOETVziI2pP5xtJQ==
+  dependencies:
+    ajv "6.12.6"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.3"
     source-map "0.7.3"
 
 "@angular-devkit/schematics@10.2.0", "@angular-devkit/schematics@^10.1.7":
@@ -631,10 +642,10 @@ ajv@6.12.4:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.5:
-  version "6.12.5"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.5.tgz#19b0e8bae8f476e5ba666300387775fb1a00a4da"
-  integrity sha512-lRF8RORchjpKG50/WFf8xmg7sgCLFiYNNnqdKflk63whMQcWR5ngGjiSXkL9bjxy6B2npOK2HSMN49jEBMSkag==
+ajv@6.12.6, ajv@^6.1.0, ajv@^6.10.2, ajv@^6.12.5:
+  version "6.12.6"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
+  integrity sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
   dependencies:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
@@ -4618,7 +4629,7 @@ rxjs@6.6.2:
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^6.6.3:
+rxjs@6.6.3, rxjs@^6.6.3:
   version "6.6.3"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz#8ca84635c4daa900c0d3967a6ee7ac60271ee552"
   integrity sha512-trsQc+xYYXZ3urjOiJOuCOa5N3jAZ3eiSpQB5hIT8zGlL2QfnHLJ2r7GMkBGuIausdJN1OneaI6gQlsqNHHmZQ==
