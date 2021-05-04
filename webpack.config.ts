@@ -5,7 +5,7 @@ import externals from 'webpack-node-externals'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import CopyWebpackPlugin from 'copy-webpack-plugin'
 import GenerateJsonWebpackPlugin from 'generate-json-webpack-plugin'
-import VisualizerPlugin from 'webpack-visualizer-plugin'
+// import VisualizerPlugin from 'webpack-visualizer-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import { collection } from './collection'
 import { version } from './package.json'
@@ -86,9 +86,9 @@ export default (_: any, argv: any): Configuration => ({
             ],
         }),
         new GenerateJsonWebpackPlugin('collection.json', buildCollection(), null, 2),
-        new VisualizerPlugin({
-            filename: 'stats.html',
-        }),
+        // new VisualizerPlugin({
+        //     filename: 'stats.html',
+        // }),
     ],
     optimization: {
         minimizer: [new TerserPlugin()],
