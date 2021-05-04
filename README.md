@@ -310,4 +310,4 @@ Add automatic version constant replacements.
 
 ## License
 
-MIT © [Pascal Iske](https://pascal-iske.de)
+MIT © [Pascal Iske](https://pascaliske.dev)
