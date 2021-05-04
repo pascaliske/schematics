@@ -25,16 +25,6 @@ const buildEntries = (): Entry => {
     }))
 }
 
-const buildGlob = (): string => {
-    const glob = collection.map(schematic => schematic.id).join(',')
-
-    if (collection.length > 1) {
-        return `{${glob}}`
-    }
-
-    return glob
-}
-
 const buildCollection = (): JsonObject => ({
     $schema: '../node_modules/@angular-devkit/schematics/collection-schema.json',
     extends: ['@schematics/angular'],
@@ -73,7 +63,7 @@ export default (_: any, argv: any): Configuration => ({
     },
     externals: [
         externals({
-            whitelist: ['npm-registry-client'],
+            allowlist: ['npm-registry-client'],
         }),
     ],
     plugins: [
@@ -82,19 +72,19 @@ export default (_: any, argv: any): Configuration => ({
             ENVIRONMENT: JSON.stringify(argv.mode),
         }),
         new CleanWebpackPlugin(),
-        new CopyWebpackPlugin([
-            {
-                from: join('src', 'schematics', buildGlob(), '*.schema.json'),
-                to: join('[1]', '[1].schema.json'),
-                test: /([a-zA-Z-]*)\.schema\.json$/,
-            },
-            {
-                from: join('src', 'schematics', buildGlob(), 'files', '**', '*'),
-                fromArgs: { nodir: false, dot: true, nobrace: false },
-                to: join('[1]', 'files', '[2]'),
-                test: /([a-zA-Z-]*)\/files\/(.+)$/,
-            },
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: join('src', 'schematics', '**', '*.schema.json'),
+                    transformPath: (target: string) => target.replace(/src\/schematics\//, ''),
+                },
+                {
+                    from: join('src', 'schematics', '**', 'files', '**', '*'),
+                    globOptions: { nodir: false, dot: true, nobrace: false },
+                    transformPath: (target: string) => target.replace(/src\/schematics\//, ''),
+                },
+            ],
+        }),
         new GenerateJsonWebpackPlugin('collection.json', buildCollection(), null, 2),
         new VisualizerPlugin({
             filename: 'stats.html',

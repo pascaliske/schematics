@@ -12,7 +12,7 @@ import { addScript } from '../../utils/scripts'
  * @param options - The schematic options
  * @returns - A schematic rule
  */
-export default function(options: StorybookSchema): Rule {
+export default function (options: StorybookSchema): Rule {
     return chain([
         addDependencies(NodeDependencyType.Dev, [
             '@babel/core',
