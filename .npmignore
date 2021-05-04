@@ -12,7 +12,6 @@ tslint.json
 /.lintstagedrc
 /.prettierignore
 /.prettierrc
-/.travis.yml
 /*.ts
 *.code-*
 *.lock
