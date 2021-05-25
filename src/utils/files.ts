@@ -1,5 +1,6 @@
 import { Rule, Tree, SchematicContext, SchematicsException } from '@angular-devkit/schematics'
 
+// eslint-disable-next-line no-undef
 export function readSafe(tree: Tree, file: string, charset: BufferEncoding = 'utf-8'): string {
     const buffer = tree.read(file)
 

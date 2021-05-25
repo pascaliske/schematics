@@ -27,12 +27,14 @@ function readPackageJson(tree: Tree): JsonAstObject {
 export function addScript(name: string, value: string): Rule {
     return (tree: Tree, _context: SchematicContext) => {
         const pkg: JsonAstObject = readPackageJson(tree)
-        const scripts = findPropertyInAstObject(pkg, 'scripts')
-        const script = findPropertyInAstObject(scripts as any, name)
+
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const scripts: any = findPropertyInAstObject(pkg, 'scripts')
+        const script = findPropertyInAstObject(scripts, name)
         const recorder = tree.beginUpdate('package.json')
 
         if (!script) {
-            appendPropertyInAstObject(recorder, scripts as any, name, value, 4)
+            appendPropertyInAstObject(recorder, scripts, name, value, 4)
         } else {
             const { end, start } = script
 

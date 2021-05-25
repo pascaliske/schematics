@@ -3,18 +3,22 @@ import { getWorkspace, updateWorkspace } from '@schematics/angular/utility/confi
 import { WorkspaceSchema } from '@schematics/angular/utility/workspace-models'
 
 function reorder(workspace: WorkspaceSchema, order: (keyof WorkspaceSchema)[]): WorkspaceSchema {
-    const reducer = (prev: WorkspaceSchema, key: keyof WorkspaceSchema) => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const reducer = (prev: WorkspaceSchema, key: keyof WorkspaceSchema): any => {
         if (workspace[key]) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
             prev[key as any] = workspace[key]
         }
 
         return prev
     }
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return order.reduce<WorkspaceSchema>(reducer, {} as any)
 }
 
 export function updateWorkspaceFile(updater: (content: WorkspaceSchema) => WorkspaceSchema): Rule {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return (tree: Tree): any => {
         const workspace: WorkspaceSchema = getWorkspace(tree)
         const update: WorkspaceSchema = updater(workspace)
@@ -33,6 +37,7 @@ export function updateWorkspaceFile(updater: (content: WorkspaceSchema) => Works
     }
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function getProjectName(options: any, workspace: WorkspaceSchema): string {
     if (options.project) {
         return options.project
