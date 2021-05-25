@@ -14,9 +14,7 @@ import {
 
 interface Options {
     filter?: FilePredicate<boolean>
-    params?: {
-        [key: string]: any
-    }
+    params?: Record<string, any> // eslint-disable-line @typescript-eslint/no-explicit-any
 }
 
 /**
