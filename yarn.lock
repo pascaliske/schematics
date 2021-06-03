@@ -2,10 +2,22 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/core@12.0.2", "@angular-devkit/core@^12.0.2":
+"@angular-devkit/core@12.0.2":
   version "12.0.2"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-12.0.2.tgz#53023140f1b011ba42eb118b1c5ab932a8069f97"
   integrity sha512-n7BmZAW0nx4pEigdAsibvtIm4Vjk1IwY3Bbc8fqD+AQpdYCo+Ake1Eu6fL2XoW8Yco7U4JYYdn/uodWEgBdroQ==
+  dependencies:
+    ajv "8.2.0"
+    ajv-formats "2.0.2"
+    fast-json-stable-stringify "2.1.0"
+    magic-string "0.25.7"
+    rxjs "6.6.7"
+    source-map "0.7.3"
+
+"@angular-devkit/core@^12.0.3":
+  version "12.0.3"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-12.0.3.tgz#01c796dd7d3e0c228b4628439ee1c34bbdda4f1f"
+  integrity sha512-d6E4ldHzIerzFpXXZkynluIbZZeYD+VteFLBZ77lOXAuUYuuLEiW8h4bpJOqribeJli5c1cJ/yyELYHrbiiLcw==
   dependencies:
     ajv "8.2.0"
     ajv-formats "2.0.2"
@@ -705,20 +717,10 @@ ajv@8.2.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
-ajv@^6.10.0, ajv@^6.12.4:
+ajv@^6.10.0, ajv@^6.12.4, ajv@^6.12.5:
   version "6.12.6"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.6.tgz#baf5a62e802b07d977034586f8c3baf5adf26df4"
   integrity sha512-j3fVLgvTo527anyYyJOGTYJbG+vnnQYvE0m5mmkc1TK+nxAppkCLMIL0aZ4dblVCNoGShhm+kzE4ZUykBoMg4g==
-  dependencies:
-    fast-deep-equal "^3.1.1"
-    fast-json-stable-stringify "^2.0.0"
-    json-schema-traverse "^0.4.1"
-    uri-js "^4.2.2"
-
-ajv@^6.12.5:
-  version "6.12.5"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.12.5.tgz#19b0e8bae8f476e5ba666300387775fb1a00a4da"
-  integrity sha512-lRF8RORchjpKG50/WFf8xmg7sgCLFiYNNnqdKflk63whMQcWR5ngGjiSXkL9bjxy6B2npOK2HSMN49jEBMSkag==
   dependencies:
     fast-deep-equal "^3.1.1"
     fast-json-stable-stringify "^2.0.0"
