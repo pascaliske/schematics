@@ -59,7 +59,7 @@
     "lint-staged": "^11.0.0",
     "prettier": "^2.3.0",
     "standard-changelog": "^2.0.27",
-    "terser-webpack-plugin": "^5.1.2",
+    "terser-webpack-plugin": "^5.2.1",
     "ts-loader": "^9.2.2",
     "ts-node": "^10.0.0",
     "typescript": "~4.3.2",
