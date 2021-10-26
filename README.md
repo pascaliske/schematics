@@ -1,3 +1,5 @@
+> **WARNING:** This repository is deprecated and will no longer receivce support!
+
 # Angular Schematics Collection
 
 [![npm (scoped)](https://img.shields.io/npm/v/@pascaliske/schematics.svg?style=flat-square)](https://www.npmjs.com/package/@pascaliske/schematics) [![GitHub Tag](https://img.shields.io/github/tag/pascaliske/schematics.svg?style=flat-square)](https://github.com/pascaliske/schematics) [![Build Status](https://img.shields.io/github/workflow/status/pascaliske/schematics/Build%20package/master?label=build&style=flat-square)](https://github.com/pascaliske/schematics/actions) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT) [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=pascaliske/schematics)](https://dependabot.com) [![GitHub Last Commit](https://img.shields.io/github/last-commit/pascaliske/schematics?style=flat-square)](https://github.com/pascaliske/schematics) [![Awesome Badges](https://img.shields.io/badge/badges-awesome-green.svg?style=flat-square)](https://github.com/Naereen/badges)
